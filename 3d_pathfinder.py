@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import art3d
 
 """
-Input format (from file):
+Input format (in file):
     A 1 2 3
     B 2 3 4
     C 3 4 5
@@ -18,12 +18,9 @@ Input format (from file):
     
 Preconditions: 
     * The graph must be connected
-    * Nodes can't be more than 1000 units apart
     * Vertically connected vertices must be directly above/below each other
-    * There can't be more than 10 vertical levels
+    * Vertex coordinate values can not be greater than 10
 """
-
-print(sys.argv)
 
 in_file = open(sys.argv[1], "r")
 line = in_file.readline()
@@ -33,7 +30,6 @@ line = in_file.readline()
 v_set = []
 while 'Connections:' not in line:
     # Create vertices such that each vertex is an array [name, x, y, z]
-    print(line)
     spl = line.split(' ')
     v = [spl[0], int(spl[1]), int(spl[2]), int(spl[3])]
 
@@ -91,8 +87,6 @@ while line:
     else:
         # Must be vertically connected
         e_len = int(abs(v1[2] - v2[2]))
-    print("Length")
-    print(e_len)
 
     # Add to connectivity matrix with connection distance
     c_matrix[v1_index][v2_index] = e_len
