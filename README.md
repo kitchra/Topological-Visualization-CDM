@@ -12,3 +12,5 @@ Current working model supports the following:
 Example:
 Given the input in `input.txt`, the following graph will be plotted.
 ![Sample Graph from Input](input_example.PNG)
+
+Where the red lines show the path from A to G, and the black lines show unused connections.
