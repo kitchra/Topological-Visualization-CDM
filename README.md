@@ -11,4 +11,4 @@ Current working model supports the following:
 
 Example:
 Given the input in `input.txt`, the following graph will be plotted.
-![Sample Graph from Input](input_sample.PNG)
+![Sample Graph from Input](input_example.PNG)
